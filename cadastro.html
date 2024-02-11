@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="disciptio" content=" Formulário para inclusão de informações de Maquinas e serviços">
+    <link rel=" stylesheet" href="./src/css/estilos.css">
+    <link rel="stylesheet" href="./src/css/reset.css">
+
+    <title>L.A Maquinario</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <!--<img class="cabecalho-imagem" src="./src/img/logo2.png" alt="Logo . ">-->
+        <h1> REGISTRO DE SOLICITAÇÃO </h1><br>
+
+    </header>
+
+    <form method="POST" action="pesquisa.php">
+        <section class="setor-pesquisa">
+            <table border="2"0>~;
+                <tr>
+                    <td>
+
+                        <input type="search" name="pesquisa" placeholder="DIGITE ORDEM DE SERVIÇO" required>
+
+                        &nbsp <button> Pesquisar </button>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </form>
+
+    <form action="OSLA.php" method="POST">
+
+        <section class="cadastro-cliente">
+
+            <table class="tabela-cliente">
+                <tr>
+                    <td>
+                        <h1>REGISTRO CLIENTE</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Data do registro: <br><input class="conteudo-data" type="datetime-local" name="data_registro"
+                            required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Nome do Cliente: <input class="conteudo-registro" type="text" name="nome" required>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>Endereço: <input class="conteudo-registro" type="text" name="endereco" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Doc.: <input class="conteudo-registro" type="text" name="RG" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Telefone: <input class="conteudo-registro" type="text" name="telefone" required>
+                    </td>
+                </tr>
+
+
+
+            </table>
+        </section><br>
+
+
+        <section class="cadastro-manutencao">
+            <table border="2">
+                <tr>
+                    <td>
+                        <h1>DESCRIÇÃO DO SERVIÇO</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="selecao-equipamento">Equipamento:</label>
+                        <select id="selecao-equipamento" name="equipamento" id="selecionado" required
+                            onchange="showInput(this)">
+                            <option class="equipamento-item" value=" ">Selecione</option>
+                            <option class="equipamento-item" value="Roçadeiras a Gasolina">Roçadeiras a Gasolina
+                            </option>
+                            <option class="equipamento-item" value="Cortador de Grama a Gasolina">Cortador de Grama a
+                                Gasolina</option>
+                            <option class="equipamento-item" value="Cortador de Grama Elétrica">Cortador de Grama
+                                Elétrica</option>
+                            <option class="equipamento-item" value="Motoserra">Motoserra</option>
+                            <option class="equipamento-item" value="Outros">Outros</option>
+                        </select>
+                        <div id="input-container"></div>
+                        </option>
+                    </td>
+                <tr>
+                    <td>
+                        <label>Serviço: </label>
+
+                        <select id="servico" name="servico" required>
+                            <option class="servico-seleção" value=" ">Selecione</option>
+                            <option class="servico-seleção" value="Manutenção">Manutenção</option>
+                            <option class="servico-seleção" value="Revisão">Revisão</option>
+                            <option class="servico-seleção" value="Limpeza">Limpeza</option>
+                            <option class="servico-seleção" value="Outros"> Outros</option>
+                            <div id="input-container"></div>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Numero de Chassi:</label> <input type="text" name="Nchassi" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Série:</label> <input type="text" name="serie" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Modelo:</label> <input type="text" name="modelo" required>
+                    </td>
+                <tr>
+                    <td>
+                        <button class="btn-principal-registro" type="submit" name="submit">CADASTRAR
+                            INFORMAÇÕES</button>
+                        </td>
+                </tr>
+                         
+            
+                </tr>
+            </table>
+        </section>
+
+    </form>
+    </form>
+
+    <script src="./src/js/index.js"></script>
+</body>
+
+
+
+</html>
